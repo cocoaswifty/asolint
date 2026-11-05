@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>App Store 商店頁在地化稽核｜asolint</title>
+<meta name="description" content="用公開資料秒級健檢你的 App Store 商店頁：缺少哪些語言、截圖與首屏問題。免費 CLI + 固定價人工稽核。">
+<style>
+  :root { --bg:#0b0e14; --card:#141925; --line:#232a3a; --fg:#e8ecf4; --muted:#9aa6bd; --accent:#4f8cff; --good:#38d39f; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.7 -apple-system,"Segoe UI",system-ui,"PingFang TC","Noto Sans TC",sans-serif; }
+  .wrap { max-width:820px; margin:0 auto; padding:56px 20px 80px; }
+  h1 { font-size:clamp(28px,5vw,42px); line-height:1.25; margin:0 0 16px; }
+  h2 { font-size:22px; margin:44px 0 12px; }
+  .lead { color:var(--muted); font-size:18px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; margin:28px 0; }
+  .btn { display:inline-block; padding:13px 22px; border-radius:10px; text-decoration:none; font-weight:600; }
+  .btn.primary { background:var(--accent); color:#fff; }
+  .btn.ghost { border:1px solid var(--line); color:var(--fg); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 24px; margin:16px 0; }
+  .grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
+  code { background:#0a0d13; border:1px solid var(--line); border-radius:6px; padding:2px 6px; font-size:14px; }
+  pre { background:#0a0d13; border:1px solid var(--line); border-radius:10px; padding:16px; overflow:auto; font-size:14px; }
+  .price { font-size:34px; font-weight:700; }
+  .muted { color:var(--muted); }
+  .tag { color:var(--good); font-weight:600; }
+  li { margin:6px 0; }
+  footer { color:var(--muted); font-size:14px; margin-top:48px; border-top:1px solid var(--line); padding-top:20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="tag">asolint｜公開資料，秒級健檢</p>
+  <h1>你的 App 商店頁，在台灣還是全英文嗎？</h1>
+  <p class="lead">我用 Apple 公開 API 比對商店頁語言與首屏素材，找出「第一次看到的中文使用者可能看不懂賣點」的地方，並給你可直接拿去改的建議。免費工具開源，完整稽核固定價。</p>
+
+  <div class="cta">
+    <a class="btn primary" href="#audit">取得完整稽核（NT$2,500）</a>
+    <a class="btn ghost" href="https://github.com/cocoaswifty/asolint">免費下載 CLI</a>
+  </div>
+
+  <h2>免費工具先自己跑一次</h2>
+  <div class="card">
+    <p class="muted">零依賴，只要一個 App Store 連結：</p>
+    <pre>python3 asolint.py --app https://apps.apple.com/tw/app/id6443918070 --country tw</pre>
+    <p>立刻看到：缺少的目標語言、iPhone／iPad 截圖數量、描述前 3 行、評分基數、最後更新天數，以及一面 <strong>100 分制的健檢分數</strong>。</p>
+  </div>
+
+  <h2 id="audit">完整稽核交付什麼（NT$2,500／每個 App）</h2>
+  <div class="grid">
+    <div class="card"><strong>① 商店頁逐項診斷</strong><p class="muted">副標題、描述首屏、截圖敘事層級，全部附公開證據與時間。</p></div>
+    <div class="card"><strong>② 同類競品對照</strong><p class="muted">最多 3 個可比對象；找不到就明說，不湊數。</p></div>
+    <div class="card"><strong>③ 文案草稿</strong><p class="muted">名稱／副標題／描述的中英草稿，待你核對實際功能。</p></div>
+    <div class="card"><strong>④ 前 3 張截圖建議</strong><p class="muted">順序、標題、賣點文案；不含圖片設計。</p></div>
+    <div class="card"><strong>⑤ Apple 規範檢核</strong><p class="muted">依官方商品頁與在地化文件整理的上線前清單。</p></div>
+    <div class="card"><strong>⑥ 一次文字修訂</strong><p class="muted">加一份「須你驗證的假設」清單。</p></div>
+  </div>
+  <p class="muted">交付時間：收到素材後 3 個工作天內。付款後開工，先收款再交付。</p>
+
+  <div class="cta">
+    <a class="btn primary" href="#" id="buy">立即購買 NT$2,500</a>
+  </div>
+  <p class="muted" id="buynote">（付款連結開通中，開通後即為真實結帳頁。）</p>
+
+  <h2>我不會做的事（誠實條款）</h2>
+  <ul>
+    <li>不保證排名、下載量或審核通過。</li>
+    <li>沒有你的後台數據，就不會聲稱任何轉換率成效；文案改善都是待驗證假說。</li>
+    <li>不代登入 App Store Connect、不代上架、不做圖片設計、不投放廣告。</li>
+    <li>不自稱「已有多家成功客戶」。</li>
+  </ul>
+
+  <footer>
+    asolint 使用 Apple 公開 iTunes Lookup API，與 Apple Inc. 無隸屬關係。<br>
+    本頁為可上線的銷售頁樣板；把付款連結填入 <code>#buy</code> 即可對外收款。
+  </footer>
+</div>
+<script>
+  // 付款連結開通後，把下面這行的網址換成你的 Payhip／Polar 結帳連結即可上線。
+  var CHECKOUT_URL = ""; // e.g. "https://payhip.com/b/xxxx"
+  if (CHECKOUT_URL) {
+    var buy = document.getElementById("buy");
+    buy.href = CHECKOUT_URL;
+    document.getElementById("buynote").textContent = "安全結帳，付款後 3 個工作天內交付。";
+  }
+</script>
+</body>
+</html>
