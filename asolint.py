@@ -215,7 +215,7 @@ def render_markdown(result: dict) -> str:
         "",
         "---",
         "由 asolint（開源工具）產生。若要『文案重寫 + 截圖敘事 + 同類對照』的完整交付，"
-        "見專案內 `docs/OFFER.md`。",
+        "見 https://cocoaswifty.github.io/asolint/ 。",
     ]
     return "\n".join(lines) + "\n"
 

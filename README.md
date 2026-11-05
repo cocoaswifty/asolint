@@ -44,6 +44,6 @@ python3 -m unittest test_asolint -v   # 離線，使用 fixture
 
 ## 需要「文案重寫 + 截圖敘事 + 同類對照」？
 
-那屬於人工交付，見專案 `docs/OFFER.md`（固定範圍服務）。
+那屬於人工交付，見 <https://cocoaswifty.github.io/asolint/>（固定範圍服務）。
 
 授權：MIT。
